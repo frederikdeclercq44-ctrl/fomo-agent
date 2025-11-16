@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMO-Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <h1>FOMO-Agent</h1>
+        <p class="subtitle">Jouw dag. Jouw planning. Jouw rust.</p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('today')">Dagoverzicht</button>
+        <button onclick="showPage('checkin')">Check-in</button>
+        <button onclick="showPage('evening')">Avondanalyse</button>
+        <button onclick="showPage('weekly')">Weekrapport</button>
+        <button onclick="showPage('settings')">Instellingen</button>
+    </nav>
+
+    <main>
+
+        <!-- DAGOVERZICHT -->
+        <section id="today" class="page visible">
+            <h2>Vandaag</h2>
+            <div id="today-content">
+                <p>Laden...</p>
+            </div>
+        </section>
+
+        <!-- CHECK-IN -->
+        <section id="checkin" class="page">
+            <h2>Dagelijkse Check-in</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Turks geleerd</li>
+                <li><input type="checkbox"> Getypt (TypingClub)</li>
+                <li><input type="checkbox"> Google Drive opgeruimd</li>
+                <li><input type="checkbox"> Beweging</li>
+                <li><input type="checkbox"> Rustmoment</li>
+            </ul>
+        </section>
+
+        <!-- AVONDANALYSE -->
+        <section id="evening" class="page">
+            <h2>Analyse van vandaag</h2>
+            <p>Beschikbaar na 22:00.</p>
+        </section>
+
+        <!-- WEEKRAPPORT -->
+        <section id="weekly" class="page">
+            <h2>Weekrapport</h2>
+            <p>Samenvatting wordt hier getoond.</p>
+        </section>
+
+        <!-- INSTELLINGEN -->
+        <section id="settings" class="page">
+            <h2>Instellingen</h2>
+            <p>Basisinstellingen van de Agent komen hier.</p>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
